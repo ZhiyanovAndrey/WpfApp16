@@ -1,0 +1,83 @@
+﻿<Window x:Class="WpfApp16.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp16"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <Path Data="M95.300011,277.09984 C95.300011,277.09984 95.299997,139.49999 152.1,138.69999 208.9,137.89999 203.30101,293.90015 203.30101,293.90015 203.30101,293.90015 163.30094,299.49933 152.10053,287.49986 139.89429,274.42281 95.300011,277.09984 95.300011,277.09984 z" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="261.205" Margin="195.3,68.795,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="166.413" StrokeThickness="2"/>
+        <Path Data="M95.300011,277.09984 C95.300011,277.09984 95.299997,139.49999 152.1,138.69999 208.9,137.89999 203.30101,293.90015 203.30101,293.90015 203.30101,293.90015 163.30094,299.49933 152.10053,287.49986 139.89429,274.42281 95.300011,277.09984 95.300011,277.09984 z" Fill="#FFF4F4F5" HorizontalAlignment="Left" 
+              Height="261.205" 
+              Margin="408.587,68.795,0,0" 
+              Stretch="Fill" 
+              Stroke="Black" 
+              VerticalAlignment="Top" 
+              Width="166.413" 
+              StrokeThickness="2"
+              RenderTransformOrigin="0.5, 0.5">
+
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Ellipse HorizontalAlignment="Left" 
+                 Margin="0" 
+                 Stroke="Black" 
+                 StrokeThickness="2" 
+                 VerticalAlignment="Top" 
+                 Width="42"
+                 Height="42" 
+                 Canvas.Top="285"
+                 Canvas.Left="315">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.371,0.288">
+                    <GradientStop Color="#FFFAF7F7"/>
+                    <GradientStop Color="#FF0C096E" Offset="1"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.Triggers>
+                <!--Анимация сразу после загрузки окна-->
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <!--будем реанимировать не размеры элипса, а расстояния от границ окна Left & Top поэтому добавим 
+                            контэйнер компоновки Convas для того что бы появились эти свойства<-->
+                            <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                Duration="0:0:5"
+                                RepeatBehavior="Forever">
+                                <LinearDoubleKeyFrame KeyTime="0" Value="285"/>
+                                <LinearDoubleKeyFrame KeyTime="20" Value="180"/>
+                                <LinearDoubleKeyFrame KeyTime="40" Value="78"/>
+                                <LinearDoubleKeyFrame KeyTime="60" Value="125"/>
+                                <LinearDoubleKeyFrame KeyTime="80" Value="253"/>
+                                <LinearDoubleKeyFrame KeyTime="99" Value="285"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard>
+                        <Storyboard>
+                               <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(Canvas.Left)"
+                                Duration="0:0:3"
+                                RepeatBehavior="Forever">
+                                <LinearDoubleKeyFrame KeyTime="0" Value="315"/>
+                                <LinearDoubleKeyFrame KeyTime="20" Value="310"/>
+                                <LinearDoubleKeyFrame KeyTime="40" Value="273"/>
+                                <LinearDoubleKeyFrame KeyTime="60" Value="220"/>
+                                <LinearDoubleKeyFrame KeyTime="80" Value="200"/>
+                                <LinearDoubleKeyFrame KeyTime="99" Value="315"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+            </Ellipse.Triggers>
+
+        </Ellipse>
+    </Canvas>
+</Window>
