@@ -46,7 +46,7 @@
                             контэйнер компоновки Convas для того что бы появились эти свойства<-->
                             <DoubleAnimationUsingKeyFrames
                                 Storyboard.TargetProperty="(Canvas.Top)"
-                                Duration="0:0:3" AutoReverse="True"
+                                Duration="0:0:3"
                                 RepeatBehavior="Forever">
                                 <LinearDoubleKeyFrame KeyTime="0%" Value="285"/>
                                 <LinearDoubleKeyFrame KeyTime="30%" Value="90"/>
@@ -61,7 +61,7 @@
                         <Storyboard>
                             <DoubleAnimationUsingKeyFrames
                                 Storyboard.TargetProperty="(Canvas.Left)"
-                                Duration="0:0:3" AutoReverse="True"
+                                Duration="0:0:3"
                                 RepeatBehavior="Forever">
                                 <LinearDoubleKeyFrame KeyTime="0%" Value="315"/>
                                 <LinearDoubleKeyFrame KeyTime="30%" Value="285"/>
@@ -83,8 +83,8 @@
                  StrokeThickness="2" 
                  Width="42"
                  Height="42" 
-                 Canvas.Top="255"
-                 Canvas.Left="530" RenderTransformOrigin="1.543,0.476">
+                 Canvas.Top="285"
+                 Canvas.Left="415" RenderTransformOrigin="1.543,0.476">
             <Ellipse.Fill>
                 <RadialGradientBrush GradientOrigin="0.371,0.288">
                     <GradientStop Color="#FFFAF7F7"/>
@@ -99,13 +99,13 @@
 
                             <DoubleAnimationUsingKeyFrames
                                 Storyboard.TargetProperty="(Canvas.Top)"
-                                Duration="0:0:3" AutoReverse="True"
+                                Duration="0:0:3"
                                 RepeatBehavior="Forever">
                                 <LinearDoubleKeyFrame KeyTime="0%" Value="285"/>
-                                <LinearDoubleKeyFrame KeyTime="20%" Value="260"/>
-                                <LinearDoubleKeyFrame KeyTime="30%" Value="255"/>
-                                <LinearDoubleKeyFrame KeyTime="60%" Value="90"/>
-                                <LinearDoubleKeyFrame KeyTime="70%" Value="90"/>
+                                <LinearDoubleKeyFrame KeyTime="30%" Value="90"/>
+                                <LinearDoubleKeyFrame KeyTime="40%" Value="90"/>
+                                <LinearDoubleKeyFrame KeyTime="70%" Value="253"/>
+                                <LinearDoubleKeyFrame KeyTime="80%" Value="260"/>
                                 <LinearDoubleKeyFrame KeyTime="99%" Value="285"/>
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
@@ -114,13 +114,13 @@
                         <Storyboard>
                             <DoubleAnimationUsingKeyFrames
                                 Storyboard.TargetProperty="(Canvas.Left)"
-                                Duration="0:0:3" AutoReverse="True"
+                                Duration="0:0:3"
                                 RepeatBehavior="Forever">
                                 <LinearDoubleKeyFrame KeyTime="0%" Value="413"/>
-                                <LinearDoubleKeyFrame KeyTime="20%" Value="475"/>
-                                <LinearDoubleKeyFrame KeyTime="30%" Value="530"/>
-                                <LinearDoubleKeyFrame KeyTime="60%" Value="493"/>
-                                <LinearDoubleKeyFrame KeyTime="70%" Value="443"/>
+                                <LinearDoubleKeyFrame KeyTime="30%" Value="443"/>
+                                <LinearDoubleKeyFrame KeyTime="40%" Value="493"/>
+                                <LinearDoubleKeyFrame KeyTime="70%" Value="530"/>
+                                <LinearDoubleKeyFrame KeyTime="80%" Value="470"/>
                                 <LinearDoubleKeyFrame KeyTime="99%" Value="413"/>
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
