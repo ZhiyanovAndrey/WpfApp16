@@ -17,8 +17,8 @@
                  StrokeThickness="2" 
                  Width="42"
                  Height="42" 
-                 Canvas.Top="345"
-                 Canvas.Left="100">
+                 Canvas.Top="50"
+                 Canvas.Left="405">
             <Ellipse.Fill>
                 <RadialGradientBrush GradientOrigin="0.371,0.288">
                     <GradientStop Color="#FFFAF7F7"/>
@@ -33,12 +33,16 @@
 
                             <DoubleAnimationUsingKeyFrames
                                 Storyboard.TargetProperty="(Canvas.Top)"
-                                Duration="0:0:5" AccelerationRatio="0.1" 
+                                Duration="0:0:2"  DecelerationRatio="0.1"
                                 RepeatBehavior="Forever">
                                 <LinearDoubleKeyFrame KeyTime="0%" Value="345"/>
-                                <LinearDoubleKeyFrame KeyTime="25%" Value="165"/>
-                                <LinearDoubleKeyFrame KeyTime="50%" Value="100"/>
-                                <LinearDoubleKeyFrame KeyTime="75%" Value="50"/>
+                                <LinearDoubleKeyFrame KeyTime="60%" Value="50"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                Duration="0:0:2" AccelerationRatio="1"
+                                RepeatBehavior="Forever">
+                                <LinearDoubleKeyFrame KeyTime="20%" Value="50"/>
                                 <LinearDoubleKeyFrame KeyTime="99%" Value="345"/>
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
@@ -47,13 +51,17 @@
                         <Storyboard>
                             <DoubleAnimationUsingKeyFrames
                                 Storyboard.TargetProperty="(Canvas.Left)"
-                                Duration="0:0:5"  AccelerationRatio="0.1" 
-                                RepeatBehavior="Forever">
+                                Duration="0:0:2" DecelerationRatio="0.1" 
+                                RepeatBehavior="Forever"> 
                                 <LinearDoubleKeyFrame KeyTime="0%" Value="100"/>
-                                <LinearDoubleKeyFrame KeyTime="25%" Value="260"/>
-                                <LinearDoubleKeyFrame KeyTime="50%" Value="340"/>
-                                <LinearDoubleKeyFrame KeyTime="75%" Value="405"/>
-                                <LinearDoubleKeyFrame KeyTime="99%" Value="700"/>
+                                <LinearDoubleKeyFrame KeyTime="60%" Value="405"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames
+                                Storyboard.TargetProperty="(Canvas.Left)"
+                                Duration="0:0:2"  AccelerationRatio="1"
+                                RepeatBehavior="Forever">
+                            <LinearDoubleKeyFrame KeyTime="20%" Value="405"/>
+                             <LinearDoubleKeyFrame KeyTime="99%" Value="700"/>
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
