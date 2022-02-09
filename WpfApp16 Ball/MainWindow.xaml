@@ -17,8 +17,8 @@
                  StrokeThickness="2" 
                  Width="42"
                  Height="42" 
-                 Canvas.Top="63"
-                 Canvas.Left="440">
+                 Canvas.Top="345"
+                 Canvas.Left="100">
             <Ellipse.Fill>
                 <RadialGradientBrush GradientOrigin="0.371,0.288">
                     <GradientStop Color="#FFFAF7F7"/>
@@ -26,21 +26,19 @@
                 </RadialGradientBrush>
             </Ellipse.Fill>
             <Ellipse.Triggers>
-                <!--Анимация сразу после загрузки окна-->
+
                 <EventTrigger RoutedEvent="Window.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
-                            <!--будем анимировать не размеры элипса, а расстояния от границ окна Left & Top поэтому добавим 
-                            контэйнер компоновки Convas для того что бы появились эти свойства<-->
+
                             <DoubleAnimationUsingKeyFrames
                                 Storyboard.TargetProperty="(Canvas.Top)"
-                                Duration="0:0:6" AccelerationRatio="0.5"
+                                Duration="0:0:5" AccelerationRatio="0.1" 
                                 RepeatBehavior="Forever">
                                 <LinearDoubleKeyFrame KeyTime="0%" Value="345"/>
-
-                                <LinearDoubleKeyFrame KeyTime="40%" Value="55"/>
-                                <LinearDoubleKeyFrame KeyTime="60%" Value="45"/>
-                                <LinearDoubleKeyFrame KeyTime="80%" Value="55"/>
+                                <LinearDoubleKeyFrame KeyTime="25%" Value="165"/>
+                                <LinearDoubleKeyFrame KeyTime="50%" Value="100"/>
+                                <LinearDoubleKeyFrame KeyTime="75%" Value="50"/>
                                 <LinearDoubleKeyFrame KeyTime="99%" Value="345"/>
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
@@ -49,17 +47,19 @@
                         <Storyboard>
                             <DoubleAnimationUsingKeyFrames
                                 Storyboard.TargetProperty="(Canvas.Left)"
-                                Duration="0:0:6" AccelerationRatio="0.5"
+                                Duration="0:0:5"  AccelerationRatio="0.1" 
                                 RepeatBehavior="Forever">
-                                <LinearDoubleKeyFrame KeyTime="0%" Value="88"/>
-
-                                <LinearDoubleKeyFrame KeyTime="40%" Value="380"/>
-                                <LinearDoubleKeyFrame KeyTime="60%" Value="400"/>
-                                <LinearDoubleKeyFrame KeyTime="80%" Value="420"/>
+                                <LinearDoubleKeyFrame KeyTime="0%" Value="100"/>
+                                <LinearDoubleKeyFrame KeyTime="25%" Value="260"/>
+                                <LinearDoubleKeyFrame KeyTime="50%" Value="340"/>
+                                <LinearDoubleKeyFrame KeyTime="75%" Value="405"/>
                                 <LinearDoubleKeyFrame KeyTime="99%" Value="700"/>
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
+
+
+
                 </EventTrigger>
 
             </Ellipse.Triggers>

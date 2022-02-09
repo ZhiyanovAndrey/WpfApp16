@@ -39,7 +39,7 @@
             </Ellipse.Fill>
             <Ellipse.Triggers>
                 <!--Анимация сразу после загрузки окна-->
-                <EventTrigger RoutedEvent="Window.Loaded">
+                <EventTrigger RoutedEvent="Window.Loaded"> 
                     <BeginStoryboard>
                         <Storyboard>
                             <!--будем анимировать не размеры элипса, а расстояния от границ окна Left & Top поэтому добавим 
